@@ -11,6 +11,12 @@
     },
     {
       "path": "./libs/shared/ui"
+    },
+    {
+      "path": "./product"
+    },
+    {
+      "path": "./apps/product"
     }
   ]
 }

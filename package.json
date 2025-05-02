@@ -2,7 +2,11 @@
   "name": "@test/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "nx run-many --target=dev --projects=product,wellness --parallel",
+    "dev:product": "nx dev product",
+    "dev:wellness": "nx dev wellness"
+  },
   "private": true,
   "dependencies": {
     "@emotion/react": "11.11.1",
@@ -49,6 +53,7 @@
   },
   "workspaces": [
     "apps/*",
-    "libs/shared/*"
+    "libs/shared/*",
+    "product"
   ]
 }

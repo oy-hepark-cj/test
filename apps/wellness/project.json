@@ -1,0 +1,46 @@
+{
+  "name": "wellness",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/wellness",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "wellness:build",
+        "dev": true,
+        "port": 3000
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "wellness:build:development",
+          "dev": true,
+          "port": 3000
+        },
+        "production": {
+          "buildTarget": "wellness:build:production",
+          "dev": false,
+          "port": 3000
+        }
+      }
+    },
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/wellness"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "dist/apps/wellness"
+        },
+        "production": {
+          "outputPath": "dist/apps/wellness"
+        }
+      }
+    }
+  },
+  "tags": []
+}

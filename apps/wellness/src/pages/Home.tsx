@@ -1,11 +1,11 @@
-import { Ui } from '@test/ui';
+import { Header } from '@test/ui';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   return (
     <div>
-      <h1>[홈 컴포넌트]</h1>
+      <Header />
       <nav>
         <ul>
           <li>
@@ -16,7 +16,7 @@ const Home: React.FC = () => {
           </li>
         </ul>
       </nav>
-      <Ui />
+
     </div>
   );
 };

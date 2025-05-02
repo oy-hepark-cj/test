@@ -1,0 +1,46 @@
+{
+  "name": "product",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/product",
+  "projectType": "application",
+  "targets": {
+    "dev": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "product:build",
+        "dev": true,
+        "port": 3001
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "product:build:development",
+          "dev": true,
+          "port": 3001
+        },
+        "production": {
+          "buildTarget": "product:build:production",
+          "dev": false,
+          "port": 3001
+        }
+      }
+    },
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/product"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "dist/apps/product"
+        },
+        "production": {
+          "outputPath": "dist/apps/product"
+        }
+      }
+    }
+  },
+  "tags": []
+}

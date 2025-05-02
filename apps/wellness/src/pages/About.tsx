@@ -1,10 +1,11 @@
+import { Header } from '@test/ui';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
 const About: React.FC = () => {
   return (
     <div>
-      <h1>[어바웃 컴포넌트]</h1>
+      <Header />
       <nav>
         <ul>
           <li>
