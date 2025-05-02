@@ -1,3 +1,4 @@
+import { Ui } from '@test/ui';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
           </li>
         </ul>
       </nav>
+      <Ui />
     </div>
   );
 };
