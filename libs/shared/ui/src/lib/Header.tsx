@@ -2,15 +2,14 @@ import styled from '@emotion/styled';
 
 // npx nx g @nx/react:library libs/shared/ui 했더니 얘가 생김
 const StyledHeader = styled.header`
-  color: gray;
-  border: 1px solid gray;
+  background-color: beige;
   text-align: center;
-  padding: .5rem;
+  padding: .75rem;
 `;
 export function Header() {
   return (
     <StyledHeader>
-      <h1>공통 헤더 영역 </h1>
+      <h1>공통 헤더 by Shared </h1>
     </StyledHeader>
   );
 }
